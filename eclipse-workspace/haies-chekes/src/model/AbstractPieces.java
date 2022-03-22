@@ -34,13 +34,22 @@ abstract class AbstractPieces implements Pieces {
 	public Couleur getCouleur() {
 		return couleur__de_piece;
 	}
-	public boolean move() {
-		//todo
-		return true;
+	
+	abstract public boolean isMoveOk(int xFinal,int yFinal);
+	
+	public boolean move(int x , int y) {
+		boolean ret = false;
+		if (this.isMoveOk(x, y)) {
+			this.coord.x = x;
+			this.coord.y = y;	
+			ret = true;
+		}
+		return ret;
 	}
 
 	public boolean capture() {
-		
+		//TODO
+		return true;
 	}
 
 	public void main() {

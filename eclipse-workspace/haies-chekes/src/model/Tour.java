@@ -6,4 +6,9 @@ class Tour extends AbstractPieces {
 		// TODO Auto-generated constructor stub
 		super(couleur, coord);
 	}
+	@Override
+	public boolean isMoveOk(int xFinal, int yFinal) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
