@@ -52,11 +52,15 @@ abstract class AbstractPieces implements Pieces {
 		return true;
 	}
 
-	public void main() {
+	public static void main(String argv[]) {
 		
-		Pieces tour= new Tour(Couleur.NOIR,new Coord(0,0));
-		tour.toString();
-		
+		Pieces tour = new Tour(Couleur.NOIR,new Coord(0,0));
+		Pieces roi = new Roi(Couleur.NOIR,new Coord(4,4));
+		Pieces reine = new Reine(Couleur.NOIR,new Coord(4,4));
+		Pieces fou = new Fou(Couleur.NOIR,new Coord(4,4));
+		Pieces cavalier = new Pion(Couleur.NOIR,new Coord(3,3));
+		cavalier.move( 3,2);
+		System.out.println(cavalier);
 	}
 
 }

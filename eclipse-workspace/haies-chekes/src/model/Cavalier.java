@@ -1,9 +1,8 @@
 package model;
 
-
-class Tour extends AbstractPieces {
+class Cavalier extends AbstractPieces {
 	
-	public Tour(Couleur couleur ,Coord coord) {
+	public Cavalier(Couleur couleur ,Coord coord) {
 		// TODO Auto-generated constructor stub
 		super(couleur, coord);
 	}
@@ -11,7 +10,8 @@ class Tour extends AbstractPieces {
 	public boolean isMoveOk(int xFinal, int yFinal) {
 		// TODO Auto-generated method stub
 		boolean ret = false;
-		if ( (xFinal != this.getX() && yFinal == this.getY()) || ((yFinal != this.getY() && xFinal == this.getX())) ){
+		if (( Math.abs(xFinal- getX())+ Math.abs(yFinal- getY()) == 3 )&&
+				(Math.abs(xFinal- getX())<=2 && Math.abs(yFinal- getY())<=2 )){
 			ret = true;
 		}
 		return ret;
