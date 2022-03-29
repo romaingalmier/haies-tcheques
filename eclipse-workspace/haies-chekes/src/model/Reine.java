@@ -1,6 +1,6 @@
 package model;
 
-class Reine extends AbstractPieces {
+public class Reine extends AbstractPieces {
 	
 	public Reine(Couleur couleur ,Coord coord) {
 		// TODO Auto-generated constructor stub

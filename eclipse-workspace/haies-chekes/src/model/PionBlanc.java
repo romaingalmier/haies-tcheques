@@ -2,9 +2,9 @@ package model;
 
 import java.awt.Color;
 
-class PionBlanc extends Pion {
+public class PionBlanc extends Pion {
 	
-	public PionBlanc(Coord coord) {
+	public PionBlanc(Couleur c,Coord coord) {
 		// TODO Auto-generated constructor stub
 		super(Couleur.BLANC, coord);
 	}
@@ -13,14 +13,14 @@ class PionBlanc extends Pion {
 		// TODO Auto-generated method stub
 		boolean ret = false;
 		
-		if ( (this.getY()==2) && xFinal == this.getX() && yFinal-this.getY()<=2 
-				&& yFinal-this.getY() > 0 ){
+		if ( (this.getY()==6) && xFinal == this.getX() && Math.abs(yFinal-this.getY() ) <= 2 
+				&& yFinal-this.getY() < 0 ){
 			ret = true;
 			}
-		else if (yFinal-this.getY()==1 && yFinal-this.getY() > 0) {
+		else if (xFinal == this.getX() && yFinal-this.getY() == -1 ) {
 			ret = true;
 		}
-		return ret;
+		return ret;	
 	}
 }
   

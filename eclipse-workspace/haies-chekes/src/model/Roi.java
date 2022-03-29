@@ -1,6 +1,6 @@
 package model;
 
-class Roi extends AbstractPieces {
+public class Roi extends AbstractPieces {
 	
 	public Roi(Couleur couleur ,Coord coord) {
 		// TODO Auto-generated constructor stub

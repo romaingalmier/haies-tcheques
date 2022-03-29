@@ -1,7 +1,7 @@
 package model;
 
 
-class Tour extends AbstractPieces {
+public class Tour extends AbstractPieces {
 	
 	public Tour(Couleur couleur ,Coord coord) {
 		// TODO Auto-generated constructor stub
